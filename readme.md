@@ -4,7 +4,7 @@
 
 | 기간 | 내용 | 폴더 |
 | --- | --- | --- |
-| 2024.12.17 ~ 2024.12.23 | RVIZ2와 Gazebo를 활용한 다중 로봇 자율 협력 시스템 시뮬레이션 | py_srvcli, multitb_interfaces, sjtu_drone, turtlebot3_multi_robot, yolo_human_navi |
+| 2024.12.17 ~ 2024.12.23 | RVIZ2와 Gazebo를 활용한 다중 로봇 자율 협력 시스템 시뮬레이션 | multitb_interfaces, py_srvcli, turtlebot3_multi_robot, yolo_human_navi, sjtu_drone |
 
 ### 기술 스택
 
@@ -82,11 +82,14 @@ $ ros2 run py_srvcli minimap
 # object detection
 $ ros2 run yolo_human_navi human_detector 
 
+# gazebo
+$ ros2 launch turtlebot3_multi_robot tmp.launch.py enable_drive:=False enable_rviz:=False
+
 # turtlebot navigation
 $ ros2 run yolo_human_navi turtlebot_navi 
 
-# gazebo
-$ ros2 launch turtlebot3_multi_robot tmp.launch.py enable_drive:=False enable_rviz:=False
+# drone navigation
+$ ros2 run sjtudrone_control test_moveto
 ```
 
 ### 기여
