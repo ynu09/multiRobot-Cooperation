@@ -89,8 +89,23 @@ $ ros2 launch turtlebot3_multi_robot tmp.launch.py enable_drive:=False enable_rv
 $ ros2 run yolo_human_navi turtlebot_navi 
 
 # drone navigation
-$ ros2 run sjtudrone_control test_moveto
+$ ros2 run sjtu_drone_control test_moveto
 ```
+
+### 주의사항
+
+아래 경로는 본인의 작업 환경에 맞게 수정하세요.
+
+```python
+# py_srvcli/minimap.py
+app = Flask(
+    __name__,
+    template_folder="/home/ynu/Rokey/project7/prj7_git/src/py_srvcli/py_srvcli/templates",
+    static_folder="/home/ynu/Rokey/project7/prj7_git/src/py_srvcli/py_srvcli/static",
+)
+```
+
+작업 환경에 맞게 수정 후, Flask 서버를 실행하세요.
 
 ### 기여
 

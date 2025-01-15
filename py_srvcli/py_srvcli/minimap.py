@@ -17,8 +17,8 @@ from multitb_interfaces.srv import HumanDetection
 # Flask 애플리케이션 초기화 및 템플릿 경로 설정
 app = Flask(
     __name__,
-    template_folder="py_srvcli/py_srvcli/templates",
-    static_folder="py_srvcli/py_srvcli/static",
+    template_folder="/home/ynu/Rokey/project7/prj7_git/src/py_srvcli/py_srvcli/templates",
+    static_folder="/home/ynu/Rokey/project7/prj7_git/src/py_srvcli/py_srvcli/static",
 )
 app.secret_key = "secret_key"  # 세션 관리에 사용할 비밀 키
 
