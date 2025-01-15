@@ -142,7 +142,6 @@ class CamSubscriber(Node):
 
     # [Service Callback] 팝업 서비스 요청 처리
     def handle_popup_service(self, request, response, robot_id):
-        """팝업 서비스 요청 처리"""
         global popup_displayed  # 팝업 상태를 추적하는 전역 변수
 
         # 이미 팝업이 표시된 상태라면 추가 요청을 무시
