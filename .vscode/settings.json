@@ -1,3 +1,41 @@
 {
-    "cmake.ignoreCMakeListsMissing": true
+    "cmake.ignoreCMakeListsMissing": true,
+    "python.autoComplete.extraPaths": [
+        "/home/ynu/Rokey/project7/prj7_git/build/yolo_human_navi",
+        "/home/ynu/Rokey/project7/prj7_git/install/yolo_human_navi/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/build/sjtu_drone_control",
+        "/home/ynu/Rokey/project7/prj7_git/install/sjtu_drone_control/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/build/sjtu_drone_bringup",
+        "/home/ynu/Rokey/project7/prj7_git/install/sjtu_drone_bringup/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/build/py_srvcli",
+        "/home/ynu/Rokey/project7/prj7_git/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/install/multitb_interfaces/local/lib/python3.10/dist-packages",
+        "/home/ynu/turtlebot3_ws/build/turtlebot3_teleop",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/ynu/turtlebot3_ws/build/turtlebot3_example",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
+        "/home/ynu/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ynu/Rokey/project7/prj7_git/build/yolo_human_navi",
+        "/home/ynu/Rokey/project7/prj7_git/install/yolo_human_navi/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/build/sjtu_drone_control",
+        "/home/ynu/Rokey/project7/prj7_git/install/sjtu_drone_control/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/build/sjtu_drone_bringup",
+        "/home/ynu/Rokey/project7/prj7_git/install/sjtu_drone_bringup/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/build/py_srvcli",
+        "/home/ynu/Rokey/project7/prj7_git/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/ynu/Rokey/project7/prj7_git/install/multitb_interfaces/local/lib/python3.10/dist-packages",
+        "/home/ynu/turtlebot3_ws/build/turtlebot3_teleop",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/ynu/turtlebot3_ws/build/turtlebot3_example",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
+        "/home/ynu/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
 }

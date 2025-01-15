@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ynu/Rokey/project7/prj7_git/install/sjtu_drone_description/include/**",
+        "/home/ynu/Rokey/project7/prj7_git/install/multitb_interfaces/include/**",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_msgs/include/**",
+        "/home/ynu/turtlebot3_ws/install/turtlebot3_gazebo/include/**",
+        "/home/ynu/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/include/**",
+        "/home/ynu/turtlebot3_ws/install/dynamixel_sdk/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/ynu/Rokey/project7/prj7_git/src/multitb_interfaces/include/**",
+        "/home/ynu/Rokey/project7/prj7_git/src/sjtu_drone/sjtu_drone_description/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

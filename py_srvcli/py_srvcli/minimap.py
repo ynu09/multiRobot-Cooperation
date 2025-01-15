@@ -17,8 +17,8 @@ from multitb_interfaces.srv import HumanDetection
 # Flask 애플리케이션 초기화 및 템플릿 경로 설정
 app = Flask(
     __name__,
-    template_folder="/home/idingg/multitb_ws/src/py_srvcli/py_srvcli/templates",
-    static_folder="/home/idingg/multitb_ws/src/py_srvcli/py_srvcli/static",
+    template_folder="py_srvcli/py_srvcli/templates",
+    static_folder="py_srvcli/py_srvcli/static",
 )
 app.secret_key = "secret_key"  # 세션 관리에 사용할 비밀 키
 
@@ -76,6 +76,7 @@ class CamSubscriber(Node):
             10,
         )
 
+        # [Topic Subscription] 드론1 전방 카메라
         self.create_subscription(
             CompressedImage,
             "/dr1/front/processed_image/compressed",
@@ -83,29 +84,13 @@ class CamSubscriber(Node):
             10,
         )
 
-        # [Topic Subscription] 드롬1 하방 카메라
+        # [Topic Subscription] 드론1 하방 카메라
         self.create_subscription(
             CompressedImage,
             "/dr1/bottom/processed_image/compressed",
             lambda msg: self.image_callback(msg, "dr1b"),
             10,
         )
-        # # [Topic Subscription] 드론1 전방 카메라
-        # self.create_subscription(
-        #     CompressedImage,
-        #     "/dr1/front/image_raw/compressed",
-        #     lambda msg: self.image_callback(msg, "dr1f"),
-        #     10,
-        # )
-
-        # # [Topic Subscription] 드롬1 하방 카메라
-        # self.create_subscription(
-        #     CompressedImage,
-        #     "/dr1/bottom/image_raw/compressed",
-        #     lambda msg: self.image_callback(msg, "dr1b"),
-        #     10,
-        # )
-        # [Topic Subscription] 드론1 전방 카메라
 
         # [Service Server] 팝업 서비스
         self.popup_services = {

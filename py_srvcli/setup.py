@@ -20,7 +20,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'calculator = py_srvcli.calculator:main',
             'minimap = py_srvcli.minimap:main',
         ],
     },
