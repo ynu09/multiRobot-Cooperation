@@ -46,8 +46,7 @@
 
 ### model
 
-![dog](https://github.com/user-attachments/assets/cd42b79d-3a58-4305-88cd-682042a3b284)
-![bird](https://github.com/user-attachments/assets/75c51826-8150-4724-9a1c-8f7fbe8e22c0)
+![model](https://github.com/user-attachments/assets/502ad266-4a80-46c4-9706-a67cf1fe70c5)
 
 ### 결과물
 
