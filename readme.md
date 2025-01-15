@@ -40,6 +40,15 @@
 
 ![world](https://github.com/user-attachments/assets/d79dce88-23d1-44ec-a2a7-bf6b70aab860)
 
+### map
+
+![map](https://github.com/user-attachments/assets/e31e68f5-3164-440a-b1c9-e00f0fb911f7)
+
+### model
+
+![dog](https://github.com/user-attachments/assets/cd42b79d-3a58-4305-88cd-682042a3b284)
+![bird](https://github.com/user-attachments/assets/75c51826-8150-4724-9a1c-8f7fbe8e22c0)
+
 ### 결과물
 
 [View PDF Document](./그룹E-2_7주차_협동-3_산출물.pdf)
@@ -103,12 +112,27 @@ app = Flask(
     template_folder="/home/ynu/Rokey/project7/prj7_git/src/py_srvcli/py_srvcli/templates",
     static_folder="/home/ynu/Rokey/project7/prj7_git/src/py_srvcli/py_srvcli/static",
 )
+
+# turtlebot3_multi_robot/map/map.yaml
+image: /home/ynu/Rokey/project7/prj7_git/src/turtlebot3_multi_robot/map/map.pgm
+
+# turtlebot3_multi_robot/models/turtlebot3_waffle/model.sdf
+<mesh>
+  <uri>/home/ynu/Rokey/project7/prj7_git/src/turtlebot3_multi_robot/models/turtlebot3_waffle/meshes/waffle_base_dog.dae</uri>
+  <scale>0.001 0.001 0.001</scale>
+</mesh>
+
+# turtlebot3_multi_robot/worlds/mini_city_add_human.world <model: tb1, tb2, tb3>
+<mesh>
+  <uri>/home/ynu/Rokey/project7/prj7_git/src/turtlebot3_multi_robot/models/turtlebot3_waffle/meshes/waffle_base_dog.dae</uri>
+  <scale>0.001 0.001 0.001</scale>
+</mesh>
 ```
 
-작업 환경에 맞게 수정 후, Flask 서버를 실행하세요.
+작업 환경에 맞게 수정 후, Flask 서버와 gazebo를 실행하세요.
 
 ### 기여
 
-- 진민혁: 드론 패키지 분석, urdf 수정, 전체 코드 연결
+- 진민혁: 모델 mesh 수정, 드론 협력 시스템
 - 서연우: World 제작, object detection, 터틀봇 협력 시스템
 - 배민지: Flask 관제 시스템 제작
