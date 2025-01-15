@@ -187,7 +187,7 @@ def login():
 
         try:
             # SQLite 데이터베이스 연결 및 사용자 인증
-            conn = sqlite3.connect("db.db")
+            conn = sqlite3.connect("src/db.db")
             cursor = conn.cursor()
             query = "SELECT * FROM users WHERE user_id = ? AND user_pw = ?"
             cursor.execute(query, (username, password))
@@ -218,7 +218,7 @@ def get_data():
     if not session.get("logged_in"):
         return "Unauthorized", 403
     try:
-        conn = sqlite3.connect("db.db")
+        conn = sqlite3.connect("src/db.db")
         cursor = conn.cursor()
         query = "SELECT x, y, name FROM robot"
         cursor.execute(query)
@@ -325,7 +325,7 @@ def get_logs():
         return "Unauthorized", 403
     try:
         # SQLite 데이터베이스에서 로그 가져오기
-        conn = sqlite3.connect("db.db")
+        conn = sqlite3.connect("src/db.db")
         cursor = conn.cursor()
         query = "SELECT time, message FROM log ORDER BY time DESC LIMIT 10"  # 최신 10개 로그 가져오기
         cursor.execute(query)

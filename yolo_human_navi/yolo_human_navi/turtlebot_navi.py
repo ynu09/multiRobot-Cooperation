@@ -1,10 +1,13 @@
 import rclpy
 from rclpy.node import Node
-from rclpy.action import ActionClient
+
 from std_msgs.msg import String
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped, Pose
-from nav2_msgs.action import FollowWaypoints
+
+from rclpy.action import ActionClient
 from rclpy.action.client import GoalStatus
+from nav2_msgs.action import FollowWaypoints
+
 import sqlite3
 from sqlite3 import Error
 import time
@@ -55,6 +58,7 @@ class MultiTurtlebotNavi(Node):
             ),
         }
 
+        # [Topic2 Subscriber] 로봇 위치
         self.last_logged = 0
         self.sub_pos_tb1 = self.create_subscription(
             PoseWithCovarianceStamped,
@@ -200,7 +204,7 @@ class MultiTurtlebotNavi(Node):
                 self.send_waypoints(robot_id)
 
     def log_to_db(self, message):
-        """Log message to database with current timestamp"""
+        # 현재 시간과 함께 로그 메시지 db에 저장
         try:
             cursor = self.conn.cursor()
             cursor.execute(
@@ -257,9 +261,6 @@ class MultiTurtlebotNavi(Node):
             f"{robot_id}_waypoint_future",
             self.waypoint_clients[robot_id].send_goal_async(
                 goal_msg,
-                # feedback_callback=lambda fb, r_id=robot_id: self.waypoint_feedback_callback(
-                #     fb, r_id
-                # ),
             ),
         )
 
@@ -268,6 +269,7 @@ class MultiTurtlebotNavi(Node):
         )
 
     def convert_coords(self, x, y):
+        # rviz-to-world.png 좌표변환
         p00 = (-10, 10)
         p01 = (30, -30)
 
@@ -276,41 +278,11 @@ class MultiTurtlebotNavi(Node):
 
         return x, y
 
-    # def waypoint_feedback_callback(self, feedback_msg, robot_id):
-    #     """Updated feedback callback to store robot position in database."""
-    #     try:
-    #         # Get the current pose from the feedback
-    #         # feedback_msg.feedback contains the actual waypoint index
-    #         current_waypoint = feedback_msg.feedback.current_waypoint
-
-    #         # Get the current waypoint's position for this robot
-    #         if current_waypoint < len(self.waypoints[robot_id]):
-    #             p00 = (-10, 10)
-    #             p01 = (30, -30)
-
-    #             current_position = self.waypoints[robot_id][current_waypoint][
-    #                 "position"
-    #             ]
-    #             x = current_position[0]
-    #             y = current_position[1]
-
-    #             convert_x = (x - p00[0]) / (p01[0] - p00[0]) * 814
-    #             convert_y = (y - p00[1]) / (p01[1] - p00[1]) * 814
-
-    #             # Update database with current position
-    #             # self.update_robot_position(convert_x, convert_y, robot_id)
-
-    #             # Log position update
-    #             # self.get_logger().info(f'{robot_id} position updated: x={x:.2f}, y={y:.2f}')
-
-    #     except Exception as e:
-    #         self.get_logger().error(f"Error in feedback callback: {str(e)}")
-
     # db에 좌표값 저장
     def init_database(self):
         """Initialize the SQLite database and create the robot table if it doesn't exist."""
         try:
-            self.conn = sqlite3.connect("db.db")
+            self.conn = sqlite3.connect("src/db.db")
             cursor = self.conn.cursor()
             cursor.execute(
                 """
