@@ -1,0 +1,5 @@
+# Request: 요청에 포함할 로봇 ID (tb1, tb2, tb3)
+string robot_id
+---
+# Respose: 응답으로 성공 여부 반환
+bool success      

@@ -1,0 +1,28 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/idingg/multitb_ws/build/yolo_human_navi",
+        "/home/idingg/multitb_ws/install/yolo_human_navi/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/build/sjtu_drone_control",
+        "/home/idingg/multitb_ws/install/sjtu_drone_control/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/build/sjtu_drone_bringup",
+        "/home/idingg/multitb_ws/install/sjtu_drone_bringup/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/build/py_srvcli",
+        "/home/idingg/multitb_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/install/pack/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/idingg/multitb_ws/build/yolo_human_navi",
+        "/home/idingg/multitb_ws/install/yolo_human_navi/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/build/sjtu_drone_control",
+        "/home/idingg/multitb_ws/install/sjtu_drone_control/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/build/sjtu_drone_bringup",
+        "/home/idingg/multitb_ws/install/sjtu_drone_bringup/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/build/py_srvcli",
+        "/home/idingg/multitb_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/idingg/multitb_ws/install/pack/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

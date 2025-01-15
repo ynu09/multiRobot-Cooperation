@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS 2 Python Debug",
+            "type": "debugpy",
+            "request": "launch",
+            // "program": "${workspaceFolder}/src/table_order/table_order/test_main.py",
+            "program": "${fileDirname}/${fileBasename}",
+            // "program": "${fileDirname}/gui.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONUNBUFFERED": "1",
+                "RMW_IMPLEMENTATION": "rmw_fastrtps_cpp"
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "envFile": "${workspaceFolder}/install/setup.bash",
+            "justMyCode": true
+        }
+    ]
+}
